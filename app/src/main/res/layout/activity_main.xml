@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_all_back_graident"
+    tools:context=".MainActivity">
+
+    <com.adimodi96.mnist.DrawView
+        android:id="@+id/drawView"
+        android:layout_width="700px"
+        android:layout_height="700px"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="75dp"
+        android:background="#000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/drawView"
+        android:layout_alignBottom="@id/drawView"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="75dp"
+        android:layout_toRightOf="@id/drawView"
+        android:background="#7535495E"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/relative_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/textView_statement_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="Predicted Number: "
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/textView_statement_number"
+                android:fontFamily="monospace"
+                android:text="-"
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_probability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relative_number"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/textView_statement_probability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="Predicted Number Probability: "
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_probability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/textView_statement_probability"
+                android:fontFamily="monospace"
+                android:text="-"
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relative_probability"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/textView_statement_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="Total Time Taken to Predict: "
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/textView_statement_time"
+                android:fontFamily="monospace"
+                android:text="-"
+                android:textColor="#FFF"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relative_time"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="15dp">
+
+            <Button
+                android:id="@+id/button_predict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_all_back_graident"
+                android:fontFamily="monospace"
+                android:text="Predict"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@id/button_predict"
+                android:background="@drawable/button_all_back_graident"
+                android:fontFamily="monospace"
+                android:text="Reset"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
